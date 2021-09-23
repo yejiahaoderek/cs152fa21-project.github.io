@@ -1,10 +1,14 @@
-# Plant/Flower Recognition & Diagnosis App
-A project proposal for CS 152
+# Plant Recognition & Diagnosis App
+A project for CS152
 
-## Project Description
-People without expertise in plant/flower always find it difficult to identify the plant/flower they encounter with. The greater of needs of plant recognition arise from situations where someone buying a new plant but does not know how to take care of it or receving a flower from others but has no idea about the symbolic meaning. 
+## Introduction
+People without expertise in plant/flower care always find it difficult to identify the plants/flowers they encounter. The need for plant recognition and plant pathology software arise from situations where people buy or receive new plants but do not know how to take care of them.
 
-I want to develop an app that tackles this problem. I will focus on training neural networks (NNs) for the recognition & diagonosis for plants. The project could be implemented in either of the following two directions. 1) Borader focus: train the NN to identify the species, health conditions, as well as planting advice of the plant in the input picture; 2) Narrower focus: train the NN to identify the type/name and symbolic meaning of the flower in the input picture. 
+We want to develop an app that tackles this problem. We will focus on training neural networks to recognize plants as well as diagnose certain plant-related ailments. The project will be implemented to train the NN to identify the species, health conditions, and the app should offer some planting advice for the plant in the input picture.
+The primary limitation of the project involves the two pronged nature of the app. Classifying plants by species and identifying plant ailments will require separate datasets and perhaps disease classification which discolors or damages distinctive plant features will interfere with species classification. 
+
+Ideally, we would want to efficiently and accurately be able to classify plants and any diseases they may be suffering from. The benchmark accuracy isn’t something we know right now and hopefully as we progress with the project, we’ll get more clarity about our goals. 
+We do not see any glaring ethical problems with this project but we will do some ethical exploration of other topics in AI, specifically, targeted advertisement.
 
 
 ## Project Goals
