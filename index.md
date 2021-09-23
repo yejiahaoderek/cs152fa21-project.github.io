@@ -1,8 +1,11 @@
 # Plant Recognition & Diagnosis App
 A project for CS152
 
+## Our Team
+Magali Ngouabou, Eric Zhu, Camilla, Jiahao Ye
+
 ## Introduction
-People without expertise in plant/flower care always find it difficult to identify the plants/flowers they encounter. The need for plant recognition and plant pathology software arise from situations where people buy or receive new plants but do not know how to take care of them.
+People without expertise in plant care always find it difficult to identify the plants they encounter. The need for plant recognition and plant pathology software arise from situations where people buy or receive new plants but do not know how to take care of them.
 
 We want to develop an app that tackles this problem. We will focus on training neural networks to recognize plants as well as diagnose certain plant-related ailments. The project will be implemented to train the NN to identify the species, health conditions, and the app should offer some planting advice for the plant in the input picture.
 The primary limitation of the project involves the two pronged nature of the app. Classifying plants by species and identifying plant ailments will require separate datasets and perhaps disease classification which discolors or damages distinctive plant features will interfere with species classification. 
@@ -12,7 +15,7 @@ We do not see any glaring ethical problems with this project but we will do some
 
 
 ## Project Goals
-1. Create/find a dataset for training a NN for plant/flower recognition
+1. Create/find a dataset for training a NN for plant recognition
 2. Train the NN with high prediction accuracy
 3. Evaluate the performance of the NN
 4. Deploy the NN on cellphones and create a simple app
