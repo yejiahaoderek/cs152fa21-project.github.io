@@ -27,6 +27,42 @@ Given that there might be similar works conducted for this topic, further steps 
 - Create a more user-friendly app that deploys the NN
 
 
+## Literature Review
+1. **Automated plant species identification—Trends and future directions (Waldchen et al.)** [Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5886388/)
+> Wäldchen, Jana et al. “Automated plant species identification-Trends and future directions.” *PLoS computational biology* vol. 14,4 e1005993. 5 Apr. 2018, doi:10.1371/journal.pcbi.1005993
+
+- The authors Waldchen, Rzanny, Seeland, and Mader write a survey paper on the current implementation of plant species identification and the way advances in deep learning are changing the way we identify plants. Waldchen et al. describe plant identification as a supervised classification problem. Many current implementations use feature identification by extracting features from plant images, creating a feature vector. Within these were model-specific implementations and model-free implementations. Of these, model-specific ended up being feature specific (e.g. a classifier that only worked when identifying very leafy plants) whereas model-free implementations were able to be more generalizable. When this paper was written in 2018, Waldchen et al. looked forward to using Convolutional Neural Networks because CNNs do not require custom, hand-crafted feature detection and extraction steps with both being part of the training process.
+
+
+2. **A computer vision system for automatic plant species identification** [Link](https://link.springer.com/chapter/10.1007/978-3-642-33709-3_36)
+> Kumar, Neeraj, et al. "Leafsnap: A computer vision system for automatic plant species identification." *European conference on computer vision.* Springer, Berlin, Heidelberg, 2012.
+
+- The paper presents an approach that does not use neural networks to identify plant species. This paper introduces a sequence of algorithmic procedures to identify tree species by leaf image extraction, stem removal, and nearest neighbors clustering.
+
+
+3. **Automated Plant Species Identification: Challenges and Opportunities** [Link](https://link.springer.com/chapter/10.1007/978-3-319-44447-5_3)
+> Mata-Montero, Erick, and Jose Carranza-Rojas. "Automated plant species identification: challenges and opportunities." *IFIP World Information Technology Forum*. Springer, Cham, 2016.
+
+- This paper discusses different ways of identifying plant species so far using computer vision and machine learning techniques, by stages. Common workflow is presented including data acquisition and sources, leaf segmentation, and feature extraction and identification. Deep learning is mentioned as approaches with huge success and an example about Convolutional Neural Network (CNN) is given.
+
+
+4. **PLANT NUTRIENT DEFICIENCY DETECTION USING DEEP CONVOLUTIONAL NEURAL NETWORK** [Link](http://www.icicel.org/ell/contents/2019/10/el-13-10-13.pdf)
+> Wulandhari, Lili Ayu, et al. "Plant nutrient deficiency detection using deep convolutional neural network." 
+*ICIC Express Letters* 13.10 (2019): 971-977.
+
+- The paper implements convolutional neural network to detect the health condition of a controlled species of plant. Particularly, the input pictures are kora and the health conditions are labelled manually in binary: either healthy or difficiency. The accuracy varies from 59.5% to 96% and analysis is given.
+
+
+5. **LeafNet: A computer vision system for automatic plant species identification** [Link](https://www.sciencedirect.com/science/article/abs/pii/S1574954116302515)
+> Barré, Pierre, et al. "LeafNet: A computer vision system for automatic plant species identification." *Ecological Informatics* 40 (2017): 50-56.
+- **No Access**
+
+
+6. **TA-CNN: Two-way attention models in deep convolutional neural network for plant recognition** [Link](https://www.sciencedirect.com/science/article/abs/pii/S0925231219309440)
+- **No Access**
+
+
+
 <!-- - Bulleted
 - List
 
