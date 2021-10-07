@@ -52,6 +52,16 @@ Given that there might be similar works conducted for this topic, further steps 
   - **No Access**
 
 
+## Data and Method Overview
+- Data
+  - Data set: https://gitlab.inria.fr/cgarcin/plantnet_dataset
+- Neural Network we will use: a CNN built using Tensorflow (link: https://www.tensorflow.org/tutorials/images/cnn)
+- Input: We will pre-process all the images to form uniform input files (64x64, three-channel images)
+- Output: One neural network will output a binary classification of whether the plant is healthy or unhealthy. The other network will be more complicated, outputting values for a set of plants, inferring which plant the image most matches. 
+
+
+## References
+
 > Wäldchen, Jana et al. “Automated plant species identification-Trends and future directions.” *PLoS computational biology* vol. 14,4 e1005993. 5 Apr. 2018, doi:10.1371/journal.pcbi.1005993
 
 
