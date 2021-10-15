@@ -23,7 +23,7 @@ Plant species identification has been a growing field for the past decade and ha
 Mata-Montero and Carranza-Rojas (2016) explored the difficulties of identifying the over 10 million plant species using computer vision and machine learning. They focus on methods that extract the following features: curvature, texture, venation, leaf morphometrics, or combinations of them. They conclude that convolutional neural networks would be most beneficial to tackling the complex issue of plant identification as it uses the whole or parts of the image directly in classifying rather than methods that more break the plant down into parts.
 
 2.2 Overview of Convolutional Neural Network (CNN)
-Inspired by biological discovery [10], the convolutional neural network (CNN) was invented by scientists as a supervised machine learning method. CNNs usually have many layers and are good at recognizing high resolution images. The model first learns small abstract features on the image, lines or curves for example, and as the network gets to deeper layers, the features are added together, becoming recognizable [11]. In brief, CNNs learn and recognize different features through iteration and dimension reduction.
+Inspired by biological discovery (Matusugu 2003), the convolutional neural network (CNN) was invented by scientists as a supervised machine learning method. CNNs usually have many layers and are good at recognizing high resolution images. The model first learns small abstract features on the image, lines or curves for example, and as the network gets to deeper layers, the features are added together, becoming recognizable (Krizhevsky 2012). In brief, CNNs learn and recognize different features through iteration and dimension reduction.
 
 ## Project Goals
 1. Create/find a dataset for training a NN for plant recognition
@@ -87,6 +87,10 @@ Given that there might be similar works conducted for this topic, further steps 
 
 
 > Barré, Pierre, et al. "LeafNet: A computer vision system for automatic plant species identification." *Ecological Informatics* 40 (2017): 50-56.
+
+> Matusugu, Masakazu; Katsuhiko Mori; Yusuke Mitari; Yuji Kaneda (2003). "Subject independent facial expression recognition with robust face detection using a convolutional neural network". Neural Networks. 16 (5): 555–559. doi:10.1016/S0893-6080(03)00115-1. Retrieved 17 November 2013.
+
+> Krizhevsky, I. Sutskever, and G. E. Hinton, “ImageNet Classification with Deep Convolutional Neural Networks,” Adv. Neural Inf. Process. Syst., pp. 1–9, 2012.
 
 <!-- - Bulleted
 - List
