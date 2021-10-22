@@ -70,6 +70,11 @@ Given that there might be similar works conducted for this topic, further steps 
 - Input: We will pre-process all the images to form uniform input files (64x64, three-channel images)
 - Output: One neural network will output a binary classification of whether the plant is healthy or unhealthy. The other network will be more complicated, outputting values for a set of plants, inferring which plant the image most matches. 
 
+## Project Milestone 2
+- What have you completed or tried to complete?
+  - Through this portion of the milestone, we have started to look into how we would create the convolutional neural network and looking into the dataset. The dataset has been downloaded from the gitlab link above and we have started research on how to use pytorch for a convolutional data set. In response to some of the Hypothesis comments, we have decided to switch from Tensorflow to Pytorch because it is the software we've been using in class and we're all more familiar with it.
+- What issues have you encountered?
+  - The main issue of the project has been fairly expected. As mentioned in the Hypothesis comments, we haven't really been able to find a data set for plant related ailments and that information doesn't seem to be included in the PlantNet data set we set above. We'll need to make a decision on how we want to proceed with this portion of the project soon but for the mean time are focusing on species identification. 
 
 ## References
 
@@ -91,6 +96,8 @@ Given that there might be similar works conducted for this topic, further steps 
 > Matusugu, Masakazu; Katsuhiko Mori; Yusuke Mitari; Yuji Kaneda (2003). "Subject independent facial expression recognition with robust face detection using a convolutional neural network". Neural Networks. 16 (5): 555–559. doi:10.1016/S0893-6080(03)00115-1. Retrieved 17 November 2013.
 
 > Krizhevsky, I. Sutskever, and G. E. Hinton, “ImageNet Classification with Deep Convolutional Neural Networks,” Adv. Neural Inf. Process. Syst., pp. 1–9, 2012.
+
+
 
 <!-- - Bulleted
 - List
