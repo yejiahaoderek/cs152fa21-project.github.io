@@ -76,6 +76,9 @@ Given that there might be similar works conducted for this topic, further steps 
 - What issues have you encountered?
   - The main issue of the project has been fairly expected. As mentioned in the Hypothesis comments, we haven't really been able to find a data set for plant related ailments and that information doesn't seem to be included in the PlantNet data set we set above. We'll need to make a decision on how we want to proceed with this portion of the project soon but for the mean time are focusing on species identification. 
 
+## Methods
+To complete this project of creating a neural network that performs a plant species identification task, we will be using a convolutional neural network. The convolutional neural network will be created using PyTorch based on an existing convolutional neural network architecture. The data set we'll be using is the PlantNet data set which contains over 300,000 images of 1081 species. The data set has already been split into a train data set and a test data set. We'll first create a neural net with some convolutional layers and some pooling layers. Then, we'll also define a loss function. Using the neural network and the loss function, we will train the neural net on the train and test data sets and see what accuracy we can achieve. We also hope to test our neural network in the real world by inputting pictures of our own with known species and testing the accuracy of our neural net on new photos. 
+
 ## References
 
 > Wäldchen, Jana et al. “Automated plant species identification-Trends and future directions.” *PLoS computational biology* vol. 14,4 e1005993. 5 Apr. 2018, doi:10.1371/journal.pcbi.1005993
