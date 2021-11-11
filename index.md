@@ -79,6 +79,11 @@ Given that there might be similar works conducted for this topic, further steps 
 ## Methods
 To complete this project of creating a neural network that performs a plant species identification task, we will be using a convolutional neural network. The convolutional neural network will be created using PyTorch based on an existing convolutional neural network architecture. The data set we'll be using is the PlantNet data set which contains over 300,000 images of 1081 species. The data set has already been split into a train data set and a test data set. We'll first create a neural net with some convolutional layers and some pooling layers. Then, we'll also define a loss function. Using the neural network and the loss function, we will train the neural net on the train and test data sets and see what accuracy we can achieve. We also hope to test our neural network in the real world by inputting pictures of our own with known species and testing the accuracy of our neural net on new photos. 
 
+## Discussion 
+In our discussion, we will first present on the dataset of PlantNet, going through the organization of the dataset as well as some examples of images. Then we'll go through the construction of the convolutional neural net we're using and discuss the results of our neural net including the accuracy, the number of epochs, the loss function, and the learning rate. 
+We believe with our dataset of about 300,000 images of plants, spanning about 1,081 species, we can evaluate with non-random accuracy, which plant is depicted in the image. We will show our data at the end of our epochs and determine if they're greater than non-random. We can then compare our results to either another CNN on the same data set or pass PlantNet into our CNN. In either scenario we would assess their accuracies in relation to our original model. 
+Our claim would be proven by achieving accuracies above a benchmark (probably >10%).
+
 ## References
 
 > Wäldchen, Jana et al. “Automated plant species identification-Trends and future directions.” *PLoS computational biology* vol. 14,4 e1005993. 5 Apr. 2018, doi:10.1371/journal.pcbi.1005993
