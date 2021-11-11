@@ -81,7 +81,9 @@ To complete this project of creating a neural network that performs a plant spec
 
 ## Discussion 
 In our discussion, we will first present on the dataset of PlantNet, going through the organization of the dataset as well as some examples of images. Then we'll go through the construction of the convolutional neural net we're using and discuss the results of our neural net including the accuracy, the number of epochs, the loss function, and the learning rate. 
+
 We believe with our dataset of about 300,000 images of plants, spanning about 1,081 species, we can evaluate with non-random accuracy, which plant is depicted in the image. We will show our data at the end of our epochs and determine if they're greater than non-random. We can then compare our results to either another CNN on the same data set or pass PlantNet into our CNN. In either scenario we would assess their accuracies in relation to our original model. 
+
 Our claim would be proven by achieving accuracies above a benchmark (probably >10%).
 
 ## References
