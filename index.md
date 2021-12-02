@@ -5,15 +5,11 @@ A project for CS152
 Magali Ngouabou, Eric Zhu, Camilla, Jiahao Ye
 
 ## Introduction
-People without expertise in plant care always find it difficult to identify the plants they encounter. The need for plant recognition and plant pathology software arise from situations where people buy or receive new plants but do not know how to take care of them. 
+People without expertise in plant care always find it difficult to identify the plants they encounter. The need for plant recognition and plant pathology software arises from situations where people buy or receive new plants but do not know how to take care of them. 
 
-We want to develop an app that tackles this problem. Using the extensive PlantNet database which includes 306,293 images and 1081 species, we will focus on training convolutional neural networks made using PyTorch to 1) recognize plants as well as 2) diagnose certain plant-related ailments. The project will be implemented to train the NN to identify the species and health conditions of the plant while also offering some planting advice for the plant in the input picture. Inputs will be pre-processed to be 64x64 pixel three-channel images with binary outputs of healthy or unhealthy and outputs of species name.
+We want to develop an app that tackles this problem. Using the extensive PlantNet database which includes 306,293 images and 1081 species, we will focus on training convolutional neural networks made using fastai to recognize plants by species. The project will be implemented to train the NN to identify the species of the plant while also offering some planting advice for the plant in the input picture. Inputs will be pre-processed to be 224x224 pixel three-channel images.
 
-The primary limitation of the project involves the two pronged nature of the app. Classifying plants by species and identifying plant ailments will require separate datasets and perhaps disease classification which discolors or damages distinctive plant features will interfere with species classification. 
-
-Ideally, we would want to efficiently and accurately be able to classify plants and any diseases they may be suffering from. The benchmark accuracy isn’t something we know right now and hopefully as we progress with the project, we’ll get more clarity about our goals. 
-
-We do not see any glaring ethical problems with this project but we will do some ethical exploration of other topics in AI, specifically, targeted advertisement.
+This paper is a study of various neural network efficacy in relation to the problem of plant species identification. We hope to find out which convolutional neural networks are best at Iefficiently and accurately classifying plants. Our benchmark accuracy is set in comparison to benchmark accuracies from a paper running PlantNet on various neural networks. In that paper, no neural network exceeded an accuracy of 80%, and thus we set that our benchmark accuracy. 
 
 ## Related Works
 
@@ -29,13 +25,11 @@ Inspired by biological discovery (Matusugu 2003), the convolutional neural netwo
 1. Create/find a dataset for training a NN for plant recognition
 2. Train the NN with high prediction accuracy
 3. Evaluate the performance of the NN
-4. Deploy the NN on cellphones and create a simple app
 
 Given that there might be similar works conducted for this topic, further steps could be
 - Optimize the NN to produce higher accuracy
 - Compare/evaluate the performance of differnent NN architecture
 - Compress the NN so that it could run on cellphones
-- Create a more user-friendly app that deploys the NN
 
 
 ## Literature Review
@@ -77,19 +71,34 @@ Given that there might be similar works conducted for this topic, further steps 
   - The main issue of the project has been fairly expected. As mentioned in the Hypothesis comments, we haven't really been able to find a data set for plant related ailments and that information doesn't seem to be included in the PlantNet data set we set above. We'll need to make a decision on how we want to proceed with this portion of the project soon but for the mean time are focusing on species identification. 
 
 ## Methods
-To complete this project of creating a neural network that performs a plant species identification task, we will be using a convolutional neural network. The convolutional neural network will be created using PyTorch based on an existing convolutional neural network architecture. The data set we'll be using is the PlantNet data set which contains over 300,000 images of 1081 species. The data set has already been split into a train data set and a test data set. We'll first create a neural net with some convolutional layers and some pooling layers. Then, we'll also define a loss function. Using the neural network and the loss function, we will train the neural net on the train and test data sets and see what accuracy we can achieve. We also hope to test our neural network in the real world by inputting pictures of our own with known species and testing the accuracy of our neural net on new photos. 
+To complete this project of creating a neural network that performs a plant species identification task, we used a convolutional neural network. The convolutional neural network was created using fastai and PyTorch based on existing convolutional neural network architectures such as ResNet and AlexNet. The data set we'll be using is the PlantNet data set which contains over 300,000 images of 1081 species. The dataset includes a csv file that pairs plant ID numbers with scientific names. The datasets are already split into training and validation sets with subfolders for photos corresponding to each species. To create the convolutional neural network with fastai, we first used the ImageDataLoaders class to create data loaders based on our training and validation data sets. In this step, we transformed the images to uniform 224x224 pixel three channel images. Then, we created a cnn_learner using our dataloaders and fastai's pre-set convolutional neural net models. We tested the PlantNet dataset on the models resnet18, resnet34, resnet50, resnet101, and alexnet. We used the Adam optimization function for our testing as well as a learning rate of 0.001. We ran each neural net through three epochs and recorded the accuracies and error rates. 
 
 ## Discussion 
-In our discussion, we will first present on the dataset of PlantNet, going through the organization of the dataset as well as some examples of images. Then we'll go through the construction of the convolutional neural net we're using and discuss the results of our neural net including the accuracy, the number of epochs, the loss function, and the learning rate. 
+For our results, we found varying accuracies based on each of the neural networks. For resnet18, we found that after 3 epochs, we had an accuracy of 76.1%, a training set loss of 0.85, and a validation set loss of 1.05. For resnet34, we saw an accuracy of 78.2%, a training set loss of 0.73, and a validation set loss of 0.96. For resnet50, we found an accuracy of 63.5%, a training set loss of 1.70, 1.67. For resnet101, we found an accuracy of 58.4% after three epochs, a training set loss of 2.04, and a validation set loss of 1.94. For AlexNet, we found an accuracy of 78.7%, a training set loss of 0.70, and a validation set loss of 0.94. 
 
-We believe with our dataset of about 300,000 images of plants, spanning about 1,081 species, we can evaluate with non-random accuracy, which plant is depicted in the image. We will show our data at the end of our epochs and determine if they're greater than non-random. We can then compare our results to either another CNN on the same data set or pass PlantNet into our CNN. In either scenario we would assess their accuracies in relation to our original model. 
+It's interesting that similar to Garcin et al., none of our convolutional neural nets achieved an accuracy of over 80%. This is probably due to many of the factors discussed in Garcin et al. such as the uneven distribution of images in the dataset such that some plant species have many more than others. Interestingly enough, the most accurate neural networks were resnet18, resnet34, and AlexNet. Perhaps this is because the neural networks with more layers (resnet50 and resnet101), are overfitting the data, leading to worse accuracy on the validation set. This overfitting of those neural nets can also be seen in the losses. For the deeper neural networks, we find a validation set loss that's less than the training set loss, indicative of overfitting. Perhaps this tendency towards overfitting can be attributed to the uneven distribution of images where the neural net is over-inclined to categorize images as one of the species that's overwhelmingly represented.
 
-Our claim would be proven by achieving accuracies above a benchmark (probably >10%).
+## Ethics
+One of the more glaringly concerning applications of neural networks is in predicting criminal recidivism. The most prominent and most commonly used technology comes Northpointe, which several papers have demonstrated that the algorithm compounds the biases that exist in the criminal justice system. Northpointe uses a self-reporting test consisting 137 questions that inquire about everything from location to friendships in order to determine the likelihood of a someone committing a crime again. Dressel & Farid (2018) demonstrated that Northpointe's algorithm performed no better than a linear regression using only two of the 137 data points boasted by Northpointe's neural network. 
+
+The criminal justice system is problematic enough without the added element of algorithmic bias. A false positive comprises not only that one person's future and wellbeing, but their family and everyone else connected to them. Some suggestions to using this technology have been limiting its scope to evaluating bail and bond amounts or in deciding whether or not to grant someone parole but even that scope is fraught. In Broward County, Florida, a county that spends $22,000 a year on Northpointe's neural network, there was a correlation between longer pretrial incarceration and higher Northpointe scores. Sade Jones, a young Black woman with no prior criminal record stole a bike and was rated medium risk by Northpointe's system. As a result of judges being swayed by the system, the young woman from a low income background was charged a $1000 bond, spend two nights in jail and would later struggle to find work.
+
+There are implementations of neural networks that can scarcely be considered ethical to pursue, considering the consequences for people's lives and the fact that we have not developed robust systems to address our own bias. Technology like Northpointe are enabling broken systems like the criminal justice system to run more efficiently in their harmful operations.
+
+## Reflection
+
+- What would you do differently next time?
+- How would you continue this work (e.g., what extensions would you pursue)?
+- 
+If we were to do this again, we would look more into ways to build out a neural network beyond fastai in order to evaluate a wider range of convolutional neural networks. Also we had to reduce our dataset by about a third because some images didn't download properly, so potentially have safeguards for corrupted data next time. As we have learned, the dataset is a lot of the work in developing a good neural network. 
+
+To continue this work, we would try to have more control over the network itself, manipulate more of the hyperparameters under the fastai abstraction layer. Maybe also see what other plant datasets exist out there that are not just PlantNet. There are probably smaller ones that would work with smaller sets of plants, so it would be interesting to see how those results would compare to PlantNet. 
 
 ## References
 
 > Wäldchen, Jana et al. “Automated plant species identification-Trends and future directions.” *PLoS computational biology* vol. 14,4 e1005993. 5 Apr. 2018, doi:10.1371/journal.pcbi.1005993
 
+>"Pl@ntNet-300K: a plant image dataset with high label ambiguity and a long-tailed distribution", Camille Garcin, Alexis Joly, Pierre Bonnet, Antoine Affouard, Jean-Christophe Lombardo, Mathias Chouet, Maximilien Servajean, Titouan Lorieul and Joseph Salmon, in Proc. of Thirty-fifth Conference on Neural Information Processing Systems, Datasets and Benchmarks Track, 2021. 
 
 > Kumar, Neeraj, et al. "Leafsnap: A computer vision system for automatic plant species identification." *European conference on computer vision.* Springer, Berlin, Heidelberg, 2012.
 
