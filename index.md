@@ -87,12 +87,9 @@ There are implementations of neural networks that can scarcely be considered eth
 
 ## Reflection
 
-- What would you do differently next time?
-- How would you continue this work (e.g., what extensions would you pursue)?
-- 
 If we were to do this again, we would look more into ways to build out a neural network beyond fastai in order to evaluate a wider range of convolutional neural networks. Also we had to reduce our dataset by about a third because some images didn't download properly, so potentially have safeguards for corrupted data next time. As we have learned, the dataset is a lot of the work in developing a good neural network. 
 
-To continue this work, we would try to have more control over the network itself, manipulate more of the hyperparameters under the fastai abstraction layer. Maybe also see what other plant datasets exist out there that are not just PlantNet. There are probably smaller ones that would work with smaller sets of plants, so it would be interesting to see how those results would compare to PlantNet. 
+To continue this work, we would try to have more control over the network itself, manipulate more of the hyperparameters under the fastai abstraction layer. Maybe also see what other plant datasets exist out there that are not just PlantNet. There are probably smaller ones that would work with smaller sets of plants, so it would be interesting to see how those results would compare to PlantNet. In addition, we would continue to work on creating a streamlit application to better present our results
 
 ## References
 
