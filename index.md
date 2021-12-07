@@ -56,20 +56,6 @@ Given that there might be similar works conducted for this topic, further steps 
 - **TA-CNN: Two-way attention models in deep convolutional neural network for plant recognition** [Link](https://www.sciencedirect.com/science/article/abs/pii/S0925231219309440)
   - **No Access**
 
-
-## Data and Method Overview
-- Data
-  - Data set: https://gitlab.inria.fr/cgarcin/plantnet_dataset
-- Neural Network we will use: a CNN built using Tensorflow (link: https://www.tensorflow.org/tutorials/images/cnn)
-- Input: We will pre-process all the images to form uniform input files (64x64, three-channel images)
-- Output: One neural network will output a binary classification of whether the plant is healthy or unhealthy. The other network will be more complicated, outputting values for a set of plants, inferring which plant the image most matches. 
-
-## Project Milestone 2
-- What have you completed or tried to complete?
-  - Through this portion of the milestone, we have started to look into how we would create the convolutional neural network and looking into the dataset. The dataset has been downloaded from the gitlab link above and we have started research on how to use pytorch for a convolutional data set. In response to some of the Hypothesis comments, we have decided to switch from Tensorflow to Pytorch because it is the software we've been using in class and we're all more familiar with it.
-- What issues have you encountered?
-  - The main issue of the project has been fairly expected. As mentioned in the Hypothesis comments, we haven't really been able to find a data set for plant related ailments and that information doesn't seem to be included in the PlantNet data set we set above. We'll need to make a decision on how we want to proceed with this portion of the project soon but for the mean time are focusing on species identification. 
-
 ## Methods
 To complete this project of creating a neural network that performs a plant species identification task, we used a convolutional neural network. The convolutional neural network was created using fastai and PyTorch based on existing convolutional neural network architectures such as ResNet and AlexNet. The data set we'll be using is the PlantNet data set which contains over 300,000 images of 1081 species. The dataset includes a csv file that pairs plant ID numbers with scientific names. The datasets are already split into training and validation sets with subfolders for photos corresponding to each species. To create the convolutional neural network with fastai, we first used the ImageDataLoaders class to create data loaders based on our training and validation data sets. In this step, we transformed the images to uniform 224x224 pixel three channel images. Then, we created a cnn_learner using our dataloaders and fastai's pre-set convolutional neural net models. We tested the PlantNet dataset on the models resnet18, resnet34, resnet50, resnet101, and alexnet. We used the Adam optimization function for our testing as well as a learning rate of 0.001. We ran each neural net through three epochs and recorded the accuracies and error rates. 
 
