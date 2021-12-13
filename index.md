@@ -4,6 +4,9 @@ A project for CS152
 ## Our Team
 Magali Ngouabou, Eric Zhu, Camilla, Jiahao Ye
 
+## Abstract
+Plant species identification has been a growing field for the past decade and has been a subject of interest of various groups. While traditional methods relying on classification algorithms have different limitations, the introduction of convolutional neural networks has proven to be more effective. This paper explores the efficacy of plant species identification using five different neural network models (resnet18, resnet34, resnet50, resnet101, and AlexNet) with PlantNet dataset. The accuracy of each model is compared with benchmark from peer study and discussion on factors that might influenced the outcome is provided.
+
 ## Introduction
 People without expertise in plant care always find it difficult to identify the plants they encounter. The need for plant recognition and plant pathology software arises from situations where people buy or receive new plants but do not know how to take care of them. 
 
@@ -14,12 +17,15 @@ This paper is a study of various neural network efficacy in relation to the prob
 ## Related Works
 
 ## 2.1 History of Plant Identification
-Plant species identification has been a growing field for the past decade and has been a subject of interest for groups ranging from ecologists to hikers to architects. With the emergence of deep learning and image identification technology, the plant identification problem has seen significant exploration. As outlined in Waldchen et al., the plant identification problem is a supervised classification problem with a training phase of classified images and a testing phase and an application phase in which the classifier classifies new images and outputs the species. Photos of plants are generally so complex that previous implementations of plant recognition algorithms used feature vectors with models extracting features to create models that identified plants based on defining characteristics such as leaf shape (Waldchen et al.). The limitation to these classifiers is that they can only identify species that differ greatly in the feature the model is trained to differentiate e.g. leaves. Other approaches using "characteristic interest points" are able to be more general. According to Waldchen et al., the next step for plant identification is Convolutional neural networks which are optimal due to their increased processing power, and the ability to perform feature detection and extraction actions in a single step.
+Plant species identification has been a growing field for the past decade and has been a subject of interest for groups ranging from ecologists to hikers to architects. With the emergence of deep learning and image identification technology, the plant identification problem has seen significant exploration. As outlined in Waldchen et al., the plant identification problem is a supervised classification problem with a training phase of classified images and a testing phase and an application phase in which the classifier classifies new images and outputs the species. Photos of plants are generally so complex that previous implementations of plant recognition algorithms used feature vectors with models extracting features to create models that identified plants based on defining characteristics such as leaf shape<sup>7</sup>. The limitation to these classifiers is that they can only identify species that differ greatly in the feature the model is trained to differentiate e.g. leaves. Other approaches using "characteristic interest points" are able to be more general. According to Waldchen et al., the next step for plant identification is Convolutional neural networks which are optimal due to their increased processing power, and the ability to perform feature detection and extraction actions in a single step<sup>7</sup>.
 
-Mata-Montero and Carranza-Rojas (2016) explored the difficulties of identifying the over 10 million plant species using computer vision and machine learning. They focus on methods that extract the following features: curvature, texture, venation, leaf morphometrics, or combinations of them. They conclude that convolutional neural networks would be most beneficial to tackling the complex issue of plant identification as it uses the whole or parts of the image directly in classifying rather than methods that more break the plant down into parts.
+The excitement over convolutional neural networks is also reflected in Mata-Montero and Carranza-Rojas (2016), who explored the difficulties of identifying the over 10 million plant species using computer vision and machine learning. They focus on methods that extract the following features: curvature, texture, venation, leaf morphometrics, or combinations of them. They conclude that convolutional neural networks would be most beneficial to tackling the complex issue of plant identification as it uses the whole or parts of the image directly in classifying rather than methods that more break the plant down into parts<sup>5</sup>.
 
 ## 2.2 Overview of Convolutional Neural Network (CNN)
-Inspired by biological discovery (Matusugu 2003), the convolutional neural network (CNN) was invented by scientists as a supervised machine learning method. CNNs usually have many layers and are good at recognizing high resolution images. The model first learns small abstract features on the image, lines or curves for example, and as the network gets to deeper layers, the features are added together, becoming recognizable (Krizhevsky 2012). In brief, CNNs learn and recognize different features through iteration and dimension reduction.
+Inspired by biological discovery (Matusugu 2003), the convolutional neural network (CNN) was invented by scientists as a supervised machine learning method. CNNs usually have many layers and are good at recognizing high resolution images<sup>6</sup>. The model first learns small abstract features on the image, lines or curves for example, and as the network gets to deeper layers, the features are added together, becoming recognizable<sup>3</sup>. In brief, CNNs learn and recognize different features through iteration and dimension reduction.
+
+## 2.3 Existing Neural Nets Applications of the Plant Identification Problem
+In the past couple of years, there has been significant headway in the plant identification problem with the use of neural networks, but the implementation has been met with mixed results primarily due to the difficulty of the problem, with data collection being a major roadblock. In Garcin et al., using various neural network models on Pl@ntNet resulted in no neural network achieving an accuracy of over 80%<sup>2</sup> while in Wulandhari et al., accuracies ranged wildly between 59.5% and 96%<sup>8</sup>. 
 
 ## Project Goals
 1. Create/find a dataset for training a NN for plant recognition
@@ -31,30 +37,6 @@ Given that there might be similar works conducted for this topic, further steps 
 - Compare/evaluate the performance of differnent NN architecture
 - Compress the NN so that it could run on cellphones
 
-
-## Literature Review
-- **Automated plant species identification—Trends and future directions (Waldchen et al.)** [Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5886388/)
-  - The authors Waldchen, Rzanny, Seeland, and Mader write a survey paper on the current implementation of plant species identification and the way advances in deep learning are changing the way we identify plants. Waldchen et al. describe plant identification as a supervised classification problem. Many current implementations use feature identification by extracting features from plant images, creating a feature vector. Within these were model-specific implementations and model-free implementations. Of these, model-specific ended up being feature specific (e.g. a classifier that only worked when identifying very leafy plants) whereas model-free implementations were able to be more generalizable. When this paper was written in 2018, Waldchen et al. looked forward to using Convolutional Neural Networks because CNNs do not require custom, hand-crafted feature detection and extraction steps with both being part of the training process.
-
-
-- **A computer vision system for automatic plant species identification** [Link](https://link.springer.com/chapter/10.1007/978-3-642-33709-3_36)
-  - The paper presents an approach that does not use neural networks to identify plant species. This paper introduces a sequence of algorithmic procedures to identify tree species by leaf image extraction, stem removal, and nearest neighbors clustering.
-
-
-- **Automated Plant Species Identification: Challenges and Opportunities** [Link](https://link.springer.com/chapter/10.1007/978-3-319-44447-5_3)
-  - This paper discusses different ways of identifying plant species so far using computer vision and machine learning techniques, by stages. Common workflow is presented including data acquisition and sources, leaf segmentation, and feature extraction and identification. Deep learning is mentioned as approaches with huge success and an example about Convolutional Neural Network (CNN) is given.
-
-
-- **PLANT NUTRIENT DEFICIENCY DETECTION USING DEEP CONVOLUTIONAL NEURAL NETWORK** [Link](http://www.icicel.org/ell/contents/2019/10/el-13-10-13.pdf)
-  - The paper implements convolutional neural network to detect the health condition of a controlled species of plant. Particularly, the input pictures are kora and the health conditions are labelled manually in binary: either healthy or difficiency. The accuracy varies from 59.5% to 96% and analysis is given.
-
-
-- **LeafNet: A computer vision system for automatic plant species identification** [Link](https://www.sciencedirect.com/science/article/abs/pii/S1574954116302515)
-  - **No Access**
-
-
-- **TA-CNN: Two-way attention models in deep convolutional neural network for plant recognition** [Link](https://www.sciencedirect.com/science/article/abs/pii/S0925231219309440)
-  - **No Access**
 
 ## Methods
 To complete this project of creating a neural network that performs a plant species identification task, we used a convolutional neural network. The convolutional neural network was created using fastai and PyTorch based on existing convolutional neural network architectures such as ResNet and AlexNet. The data set we'll be using is the PlantNet data set which contains over 300,000 images of 1081 species. The dataset includes a csv file that pairs plant ID numbers with scientific names. The datasets are already split into training and validation sets with subfolders for photos corresponding to each species. To create the convolutional neural network with fastai, we first used the [ImageDataLoaders](https://docs.fast.ai/vision.data.html#ImageDataLoaders) class to create data loaders based on our training and validation data sets. In this step, we transformed the images to uniform 224x224 pixel three channel images. Then, we created a cnn_learner using our dataloaders and fastai's pre-set convolutional neural net models. We tested the PlantNet dataset on the models resnet18, resnet34, resnet50, resnet101, and alexnet. We used the Adam optimization function for our testing as well as a learning rate of 0.001. We ran each neural net through three epochs and recorded the accuracies and error rates. 
@@ -83,52 +65,25 @@ There are implementations of neural networks that can scarcely be considered eth
 
 ## Reflection
 
-If we were to do this again, we would look more into ways to build out a neural network beyond fastai in order to evaluate a wider range of convolutional neural networks ie use pytorch in order to have access to a wider range of CNNs like SqueezeNet, EffecientNet, etc. Also we had to reduce our dataset by about a third because some images didn't download properly, so potentially have safeguards for corrupted data next time. As we have learned, the dataset is a lot of the work in developing a good neural network. 
+If we were to do this again, we would look more into ways to build out a neural network beyond fastai in order to evaluate a wider range of convolutional neural networks ie use pytorch in order to have access to a wider range of CNNs like SqueezeNet, EffecientNet, etc. Also we had to reduce our dataset by about a third because some images didn't download properly, so potentially have safeguards for corrupted data next time. As we have learned, the dataset is a lot of the work in developing a good neural network. We would also explore the implementation of a streamlit application more in depth to create a user-friendly version of our neural network.
 
 To continue this work, we would try to have more control over the network itself, manipulate more of the hyperparameters under the fastai abstraction layer. Maybe also see what other plant datasets exist out there that are not just PlantNet. There are probably smaller ones that would work with smaller sets of plants, so it would be interesting to see how those results would compare to PlantNet. In addition, we would continue to work on creating a streamlit application to better present our results
 
 ## References
-
-> Wäldchen, Jana et al. “Automated plant species identification-Trends and future directions.” *PLoS computational biology* vol. 14,4 e1005993. 5 Apr. 2018, doi:10.1371/journal.pcbi.1005993
-
->"Pl@ntNet-300K: a plant image dataset with high label ambiguity and a long-tailed distribution", Camille Garcin, Alexis Joly, Pierre Bonnet, Antoine Affouard, Jean-Christophe Lombardo, Mathias Chouet, Maximilien Servajean, Titouan Lorieul and Joseph Salmon, in Proc. of Thirty-fifth Conference on Neural Information Processing Systems, Datasets and Benchmarks Track, 2021. 
-
-> Kumar, Neeraj, et al. "Leafsnap: A computer vision system for automatic plant species identification." *European conference on computer vision.* Springer, Berlin, Heidelberg, 2012.
-
-
-> Mata-Montero, Erick, and Jose Carranza-Rojas. "Automated plant species identification: challenges and opportunities." *IFIP World Information Technology Forum*. Springer, Cham, 2016.
-
-
-> Wulandhari, Lili Ayu, et al. "Plant nutrient deficiency detection using deep convolutional neural network." 
-*ICIC Express Letters* 13.10 (2019): 971-977.
-
-
 > Barré, Pierre, et al. "LeafNet: A computer vision system for automatic plant species identification." *Ecological Informatics* 40 (2017): 50-56.
 
-> Matusugu, Masakazu; Katsuhiko Mori; Yusuke Mitari; Yuji Kaneda (2003). "Subject independent facial expression recognition with robust face detection using a convolutional neural network". Neural Networks. 16 (5): 555–559. doi:10.1016/S0893-6080(03)00115-1. Retrieved 17 November 2013.
+>Camille Garcin, Alexis Joly, Pierre Bonnet, Antoine Affouard, Jean-Christophe Lombardo, Mathias Chouet, Maximilien Servajean, Titouan Lorieul and Joseph Salmon, "Pl@ntNet-300K: a plant image dataset with high label ambiguity and a long-tailed distribution", in Proc. of Thirty-fifth Conference on Neural Information Processing Systems, Datasets and Benchmarks Track, 2021. 
 
 > Krizhevsky, I. Sutskever, and G. E. Hinton, “ImageNet Classification with Deep Convolutional Neural Networks,” Adv. Neural Inf. Process. Syst., pp. 1–9, 2012.
 
+> Kumar, Neeraj, et al. "Leafsnap: A computer vision system for automatic plant species identification." *European conference on computer vision.* Springer, Berlin, Heidelberg, 2012.
 
+> Mata-Montero, Erick, and Jose Carranza-Rojas. "Automated plant species identification: challenges and opportunities." *IFIP World Information Technology Forum*. Springer, Cham, 2016.
 
-<!-- - Bulleted
-- List
+> Matusugu, Masakazu; Katsuhiko Mori; Yusuke Mitari; Yuji Kaneda (2003). "Subject independent facial expression recognition with robust face detection using a convolutional neural network". Neural Networks. 16 (5): 555–559. doi:10.1016/S0893-6080(03)00115-1. Retrieved 17 November 2013.
 
-1. Numbered
-2. List
+> Wäldchen, Jana et al. “Automated plant species identification-Trends and future directions.” *PLoS computational biology* vol. 14,4 e1005993. 5 Apr. 2018, doi:10.1371/journal.pcbi.1005993
+ 
+> Wulandhari, Lili Ayu, et al. "Plant nutrient deficiency detection using deep convolutional neural network." 
+*ICIC Express Letters* 13.10 (2019): 971-977.
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src) -->
-
-<!-- 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yejiahaoderek/cs152sp21-project.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out. -->
