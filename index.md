@@ -28,14 +28,11 @@ Inspired by biological discovery (Matusugu 2003), the convolutional neural netwo
 In the past couple of years, there has been significant headway in the plant identification problem with the use of neural networks, but the implementation has been met with mixed results primarily due to the difficulty of the problem, with data collection being a major roadblock. In Garcin et al., using various neural network models on Pl@ntNet resulted in no neural network achieving an accuracy of over 80%<sup>2</sup> while in Wulandhari et al., accuracies ranged wildly between 59.5% and 96%<sup>8</sup>. 
 
 ## Project Goals
-1. Create/find a dataset for training a NN for plant recognition
-2. Train the NN with high prediction accuracy
-3. Evaluate the performance of the NN
+- Find a dataset for training a NN for plant recognition
+- Train the NN with high prediction accuracy
+- Evaluate the performance of the NN
+- Compare/evaluate the performance of different NN architecture
 
-Given that there might be similar works conducted for this topic, further steps could be
-- Optimize the NN to produce higher accuracy
-- Compare/evaluate the performance of differnent NN architecture
-- Compress the NN so that it could run on cellphones
 
 
 ## Methods
