@@ -4,6 +4,9 @@ A project for CS152
 ## Our Team
 Magali Ngouabou, Eric Zhu, Camilla, Jiahao Ye
 
+## Abstract
+Plant species identification has been a growing field for the past decade and has been a subject of interest of various groups. While traditional methods relying on classification algorithms have different limitations, the introduction of convolutional neural networks has proven to be more effective. This paper explores the efficacy of plant species identification using five different neural network models (resnet18, resnet34, resnet50, resnet101, and AlexNet) with PlantNet dataset. The accuracy of each model is compared with benchmark from peer study and discussion on factors that might influenced the outcome is provided.
+
 ## Introduction
 People without expertise in plant care always find it difficult to identify the plants they encounter. The need for plant recognition and plant pathology software arises from situations where people buy or receive new plants but do not know how to take care of them. 
 
