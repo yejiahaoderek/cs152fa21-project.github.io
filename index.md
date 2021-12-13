@@ -62,6 +62,14 @@ To complete this project of creating a neural network that performs a plant spec
 ## Discussion 
 For our results, we found varying accuracies based on each of the neural networks. For resnet18, we found that after 3 epochs, we had an accuracy of 76.1%, a training set loss of 0.85, and a validation set loss of 1.05. For resnet34, we saw an accuracy of 78.2%, a training set loss of 0.73, and a validation set loss of 0.96. For resnet50, we found an accuracy of 63.5%, a training set loss of 1.70, 1.67. For resnet101, we found an accuracy of 58.4% after three epochs, a training set loss of 2.04, and a validation set loss of 1.94. For AlexNet, we found an accuracy of 78.7%, a training set loss of 0.70, and a validation set loss of 0.94. 
 
+| Model      | Accuracy         | Training Set Loss  | Validation Set Loss |
+| ------------- |:-------------:| -----:|---:
+| resnet18      | 76.1% | 0.85 | 1.05
+| resnet34      | 78.2% | 0.73 | 0.96
+| resnet50      | 63.5% | 1.70 | 1.67
+| resnet101     | 58.4% | 2.04 | 1.94
+| AlexNet       | 78.7% | 0.70 | 0.94
+
 It's interesting that similar to Garcin et al., none of our convolutional neural nets achieved an accuracy of over 80%. This is probably due to many of the factors discussed in Garcin et al. such as the uneven distribution of images in the dataset such that some plant species have many more than others. Interestingly enough, the most accurate neural networks were resnet18, resnet34, and AlexNet. Perhaps this is because the neural networks with more layers (resnet50 and resnet101), are overfitting the data, leading to worse accuracy on the validation set. This overfitting of those neural nets can also be seen in the losses. For the deeper neural networks, we find a validation set loss that's less than the training set loss, indicative of overfitting. Perhaps this tendency towards overfitting can be attributed to the uneven distribution of images where the neural net is over-inclined to categorize images as one of the species that's overwhelmingly represented.
 
 ## Ethics
