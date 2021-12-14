@@ -66,6 +66,9 @@ If we were to do this again, we would look more into ways to build out a neural 
 
 To continue this work, we would try to have more control over the network itself, manipulate more of the hyperparameters under the fastai abstraction layer. Maybe also see what other plant datasets exist out there that are not just PlantNet. There are probably smaller ones that would work with smaller sets of plants, so it would be interesting to see how those results would compare to PlantNet. In addition, we would continue to work on creating a streamlit application to better present our results
 
+## Presentation Video
+https://youtu.be/nKOCknxnQYc
+
 ## References
 > Barré, Pierre, et al. "LeafNet: A computer vision system for automatic plant species identification." *Ecological Informatics* 40 (2017): 50-56.
 
